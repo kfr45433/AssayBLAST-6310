@@ -14,7 +14,6 @@ def find_lengths(file_path :str):
             line = line.rstrip()
             if line.startswith(">"):
                 # we've hit a new header, so we must process the previous sequence.
-                #print the previous sequence first before the header
                 # check: is the sequence var empty? if it's not, let's print the len to console.
                 if header: #check it's not empty before processing the previous sequence
                     seq = "".join(sequence)
