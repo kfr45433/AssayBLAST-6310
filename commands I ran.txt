@@ -1,0 +1,49 @@
+// commands I ran
+// load miniforge (for conda)
+[kuetche.r@explorer-01 ~]$ module avail miniforge3/26.7.2-0 
+[kuetche.r@explorer-01 ~]$ module load miniforge3/26.7.2-0
+[kuetche.r@explorer-01 ~]$ conda create -n assayblast_paper --override-channels -c conda-forge -c bioconda --strict-channel-priority "python=3.13" "blast=2.17.0" matplotlib numpy pandas seaborn scipy "biopython=1.85"
+// sometimes it creates hangs, so run with verbose output
+conda create -vv -n assayblast_paper --override-channels -c conda-forge -c bioconda --strict-channel-priority "python=3.13" "blast=2.17.0" matplotlib numpy pandas seaborn scipy "biopython=1.85" 2>&1 | tee conda_create.log
+// seems like there's an issue with downloading or caching the channel indexes
+// Test the network directly
+If it hangs or times out, the node has no direct internet access or needs a proxy
+curl -o /dev/null -w "%{http_code} %{size_download} bytes in %{time_total}s\n" \
+  https://conda.anaconda.org/conda-forge/linux-64/repodata.json.zst
+It returned:
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 56.3M  100 56.3M    0     0   112M      0 --:--:-- --:--:-- --:--:--  111M
+200 59063862 bytes in 0.502466s
+So the proxy and throttling is okay.
+// Make a personal cache and env location, skipping the shared for conda anyway
+[kuetche.r@explorer-01 kuetche.r]$ cd ~
+[kuetche.r@explorer-01 ~]$ mkdir -p ~/conda_pkgs
+[kuetche.r@explorer-01 ~]$ export CONDA_PKGS_DIRS=$HOME/conda_pkgs
+[kuetche.r@explorer-01 ~]$ conda clean --index-cache
+[kuetche.r@explorer-01 ~]$ cd /scratch/kuetche.r
+// even mamba doesn't work so let's move to an interactive job
+[kuetche.r@explorer-01 kuetche.r]$ srun --mem=16G --cpus-per-task=4 --time=1:00:00 --pty bash
+// has internet, will add check later
+[kuetche.r@c0281 kuetche.r]$ module load miniforge3/26.7.2-0
+[kuetche.r@c0281 kuetche.r]$ export CONDA_PKGS_DIRS=$HOME/conda_pkgs
+[kuetche.r@c0281 kuetche.r]$ mamba create -n assayblast_paper --override-channels -c conda-forge -c bioconda \
+ --strict-channel-priority "python=3.13" "blast=2.17.0" matplotlib numpy pandas seaborn scipy "biopython=1.85"
+// but this won't work because mamba will create the environment inside the shared miniforge install, which can't be written to. give mamba an explicit location
+[kuetche.r@c0281 kuetche.r]$ mkdir -p ~/myenvs ~/conda_pkgs
+[kuetche.r@c0281 kuetche.r]$ export CONDA_PKGS_DIRS=$HOME/conda_pkgs
+[kuetche.r@c0281 kuetche.r]$ mamba create -p ~/myenvs/assayblast_paper --override-channels \
+  -c conda-forge -c bioconda --strict-channel-priority \
+  "python=3.13" "blast=2.17.0" matplotlib numpy pandas seaborn scipy "biopython=1.85"
+// environment created, so run
+To activate this environment, use:
+
+    mamba activate /home/kuetche.r/myenvs/assayblast_paper
+
+Or to execute a single command in this environment, use:
+
+    mamba run -p /home/kuetche.r/myenvs/assayblast_paper mycommand
+// then write
+[kuetche.r@c0281 kuetche.r]$ conda activate ~/myenvs/assayblast_paper
+(/home/kuetche.r/myenvs/assayblast_paper) [kuetche.r@c0281 kuetche.r]$ git clone https://github.com/rnajena/assayblast_paper.git
+// ... follow the commands on the GitHub.
