@@ -47,3 +47,5 @@ Or to execute a single command in this environment, use:
 [kuetche.r@c0281 kuetche.r]$ conda activate ~/myenvs/assayblast_paper
 (/home/kuetche.r/myenvs/assayblast_paper) [kuetche.r@c0281 kuetche.r]$ git clone https://github.com/rnajena/assayblast_paper.git
 // ... follow the commands on the GitHub.
+// IMPORTANT: before activating the environment, run:
+eval "$(mamba shell hook --shell bash)"
