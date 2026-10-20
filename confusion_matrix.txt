@@ -1,0 +1,61 @@
+Match probe_aacA-aphD-10 to aacA-aphD-10,4
+Match probe_aphA-3-18 to aphA-3-18,3
+Match probe_ermA-9 to ermA-9,4
+Match probe_ermC-8 to ermC-8,1
+Match probe_ermC-8 to ermC-8,2
+probe_ermC-8 twice in syn_probes
+Match probe_linA-19 to linA-19,2
+Match probe_linA-19 to linA-19,3
+probe_linA-19 twice in syn_probes
+Match probe_mecA-1 to mecA-1,4
+Match probe_sat-17 to sat-17,2
+Match probe_sat-17 to sat-17,3
+probe_sat-17 twice in syn_probes
+Match probe_tetK-12 to tetK-12,3
+Match probe_tetK-12 to tetK-12,4
+probe_tetK-12 twice in syn_probes
+Match probe_tetM-11 to tetM-11,3
+Match probe_tst-1-16 to tst-1-16,2
+Match probe_1 to 1,2-aadD
+Match probe_1 to 13,2-mupR
+probe_1 twice in syn_probes
+Match probe_1 to 15,3-msrA
+probe_1 twice in syn_probes
+Match probe_1 to 15,3-vatA
+probe_1 twice in syn_probes
+Match probe_1 to 16,3-vatB
+probe_1 twice in syn_probes
+Match probe_1 to 17,3-vga
+probe_1 twice in syn_probes
+Match probe_1 to 18,2-vanA
+  probe_1 twice in syn_probes
+Match probe_1 to 18,3-vgaA
+probe_1 twice in syn_probes
+Match probe_1 to 19,2-vgb
+probe_1 twice in syn_probes
+Match probe_1 to 19,3-vanB
+probe_1 twice in syn_probes
+Match probe_2 to 2,1-dfrA
+Match probe_2 to 20,3-vanZ
+probe_2 twice in syn_probes
+Match probe_3 to 3,2-entA
+Match probe_3 to 3,3-entA
+probe_3 twice in syn_probes
+Match probe_4 to 4,1-entB
+Match probe_5 to 5,2-entC
+Match probe_5 to 5,3-entC
+probe_5 twice in syn_probes
+Match probe_8 to 8,2-etA
+Match probe_9 to 9,3-etB
+Left-over exp probes, remove them: ['hlb_12']
+number of values: 4020
+Confusion matrix for v2:
+         syn
+         + -
+exp + 1282 24
+    - 51 2663
+Confusion matrix for v1:
+         syn
+         + -
+exp + 1255 51
+    - 49 2665
