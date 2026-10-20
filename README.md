@@ -8,3 +8,5 @@ fig_bitscore_vs_score.pdf = figure 4\
 blast_results_assay_details.tsv = table 3\
 blast_results_assay_overview.tsv = table 2\
 Table 1 not included because it's marked as obsolete in the original file.
+## Todo for later:
+Format table 4 in readable format.
