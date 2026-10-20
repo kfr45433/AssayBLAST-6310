@@ -1,0 +1,66 @@
+// format for lateR?
+evaluation table 4
+\begin{tabular}{lrrr rcr rcr rcr}
+\toprule
+% organism qlen mismatch version success nhits time evalue
+\midrule
+\textit{Homo sapiens} & $100\,\mathrm{nt}$ & 0 & 2.8e-29 & 1 & \cmark & $16.8\,\mathrm{s}$ & 1 & \cmark & $40.5\,\mathrm{s}$ & 1 & \cmark & $307\,\mathrm{s}$\\
+\textit{Homo sapiens} & $100\,\mathrm{nt}$ & 2 & 7.2e-28 & 2 & \cmark & $16.8\,\mathrm{s}$ & 81 & \xmark & $41.6\,\mathrm{s}$ & 81 & \xmark & $309\,\mathrm{s}$\\
+\textit{Candida albicans} & $50\,\mathrm{nt}$ & 0 & 2.8e-12 & 1 & \cmark & $1.46\,\mathrm{s}$ & 1 & \cmark & $5.02\,\mathrm{s}$ & 1 & \cmark & $90.2\,\mathrm{s}$\\
+\textit{Candida albicans} & $50\,\mathrm{nt}$ & 2 & 7.2e-11 & 1 & \cmark & $1.14\,\mathrm{s}$ & 1 & \cmark & $4.36\,\mathrm{s}$ & 1 & \cmark & $89.8\,\mathrm{s}$\\
+\textit{Homo sapiens} & $50\,\mathrm{nt}$ & 0 & 6.0e-10 & 1 & \cmark & $8.88\,\mathrm{s}$ & 1 & \cmark & $16.9\,\mathrm{s}$ & 1 & \cmark & $55.6\,\mathrm{s}$\\
+\textit{Homo sapiens} & $50\,\mathrm{nt}$ & 2 & 1.6e-08 & 28 & \cmark & $8.99\,\mathrm{s}$ & 203 & \xmark & $16.9\,\mathrm{s}$ & 203 & \xmark & $53.6\,\mathrm{s}$\\
+\textit{Influenzavirus A} & $20\,\mathrm{nt}$ & 0 & $0.00063$ & 1 & \cmark & $1.83\,\mathrm{s}$ & 1 & \cmark & $3.66\,\mathrm{s}$ & 1 & \cmark & $3.60\,\mathrm{s}$\\
+\textit{Influenzavirus A} & $20\,\mathrm{nt}$ & 2 & $0.016$ & 1 & \cmark & $1.60\,\mathrm{s}$ & 1 & \cmark & $3.83\,\mathrm{s}$ & 1 & \cmark & $3.34\,\mathrm{s}$\\
+\textit{Staphylococcus aureus} & $20\,\mathrm{nt}$ & 0 & $0.14$ & 1 & \cmark & $1.50\,\mathrm{s}$ & 1 & \cmark & $3.60\,\mathrm{s}$ & 1 & \cmark & $5.90\,\mathrm{s}$\\
+\textit{Candida albicans} & $20\,\mathrm{nt}$ & 0 & $0.67$ & 1 & \cmark & $1.76\,\mathrm{s}$ & 1 & \cmark & $4.08\,\mathrm{s}$ & 1 & \cmark & $14.5\,\mathrm{s}$\\
+\textit{Influenzavirus A} & $10\,\mathrm{nt}$ & 0 & $2.7$ & 1 & \cmark & $1.50\,\mathrm{s}$ & 1 & \cmark & $5.52\,\mathrm{s}$ & 1 & \cmark & $3.95\,\mathrm{s}$\\
+\textit{Staphylococcus aureus} & $20\,\mathrm{nt}$ & 2 & $3.6$ & 1 & \cmark & $1.18\,\mathrm{s}$ & 1 & \cmark & $3.22\,\mathrm{s}$ & 1 & \cmark & $6.71\,\mathrm{s}$\\
+$^*$\textit{Candida albicans} & $20\,\mathrm{nt}$ & 2 & $17$ & 4 & \cmark & $1.50\,\mathrm{s}$ & 3 & \xmark & $3.65\,\mathrm{s}$ & 4 & \xmark & $14.3\,\mathrm{s}$\\
+\textit{Influenzavirus A} & $10\,\mathrm{nt}$ & 2 & $69$ & 10 & \cmark & $1.52\,\mathrm{s}$ & 1 & \xmark & $3.41\,\mathrm{s}$ & 1 & \xmark & $4.20\,\mathrm{s}$\\
+\textit{Homo sapiens} & $20\,\mathrm{nt}$ & 0 & $150$ & 460 & \cmark & $3.66\,\mathrm{s}$ & 460 & \cmark & $7.76\,\mathrm{s}$ & 460 & \cmark & $10.4\,\mathrm{s}$\\
+\textit{Staphylococcus aureus} & $10\,\mathrm{nt}$ & 0 & $590$ & 93 & \cmark & $2.81\,\mathrm{s}$ & 93 & \cmark & $10.7\,\mathrm{s}$ & 93 & \cmark & $5.11\,\mathrm{s}$\\
+\textit{Candida albicans} & $10\,\mathrm{nt}$ & 0 & $2\,900$ & 193 & \cmark & $2.11\,\mathrm{s}$ & 0 & \xmark & $3.62\,\mathrm{s}$ & 193 & \cmark & $4.17\,\mathrm{s}$\\
+\textit{Homo sapiens} & $20\,\mathrm{nt}$ & 2 & $3\,800$ & 1566 & \cmark & $5.72\,\mathrm{s}$ & 460 & \xmark & $7.63\,\mathrm{s}$ & 19492 & \xmark & $11.5\,\mathrm{s}$\\
+\textit{Staphylococcus aureus} & $10\,\mathrm{nt}$ & 2 & $15\,000$ & 3732 & \cmark & $2.89\,\mathrm{s}$ & 93 & \xmark & $4.70\,\mathrm{s}$ & 840 & \xmark & $6.20\,\mathrm{s}$\\
+\textit{Candida albicans} & $10\,\mathrm{nt}$ & 2 & $74\,000$ & 6363 & \cmark & $2.64\,\mathrm{s}$ & 0 & \xmark & $3.10\,\mathrm{s}$ & 1354 & \xmark & $5.52\,\mathrm{s}$\\
+\textit{Homo sapiens} & $10\,\mathrm{nt}$ & 0 & $620\,000$ & 7531 & \cmark & $49.5\,\mathrm{s}$ & 0 & \xmark & $143\,\mathrm{s}$ & 0 & \xmark & $7.48\,\mathrm{s}$\\
+\textit{Homo sapiens} & $10\,\mathrm{nt}$ & 2 & $16\,000\,000$ & 304011 & \cmark & $102\,\mathrm{s}$ & 0 & \xmark & $6.80\,\mathrm{s}$ & 0 & \xmark & $5.95\,\mathrm{s}$\\
+\bottomrule
+\end{tabular}
+
+v2 hits features
+None        10+ 20  name=primer_yeast_query_yeast_20;score=30.1;evalue=0.072;...
+None   216_720- 20  name=primer_yeast_query_yeast_20;score=25.2;evalue=2.3;se...
+None 2_143_260- 19  name=primer_yeast_query_yeast_20;score=26.3;evalue=1.1;se...
+None   427_799- 20  name=primer_yeast_query_yeast_20;score=25.2;evalue=2.3;se...
+v1 hits features
+None      10+ 20  name=primer_yeast_query_yeast_20;score=27.4;evalue=1.2;seqi...
+None 216_720- 20  name=primer_yeast_query_yeast_20;score=23.2;evalue=23.0;seq...
+None 427_799- 20  name=primer_yeast_query_yeast_20;score=23.2;evalue=23.0;seq...
+None 700_283+ 18  name=primer_yeast_query_yeast_20;score=19.9;evalue=224.0;se...
+query
+AATCACAAATTCCTTTGAAA
+v2 hits sequences
+4 seqs in basket
+NC_032089.1  20  AATCACAAATTCCTTTGAAA  GC:25.00%
+NC_032089.1  20  AATCAAAAATTGCTTTGAAA  GC:20.00%
+NC_032089.1  19  AGTCACAAATTCCTTTGAA  GC:31.58%
+NC_032091.1  20  AAACACAAATTCATTTGAAA  GC:20.00%
+  customize output with BioBasket.tostr() method
+v1 hits sequences
+4 seqs in basket
+NC_032089.1  20  AATCACAAATTCCTTTGAAA  GC:25.00%
+NC_032089.1  20  AATCAAAAATTGCTTTGAAA  GC:20.00%
+NC_032091.1  20  AAACACAAATTCATTTGAAA  GC:20.00%
+NC_032095.1  18  AATCACAAACCTTTGAAA  GC:27.78%
+  customize output with BioBasket.tostr() method
+
+hits table 4
+table
+query & \texttt{AATCACAAATTCCTTTGAAA}\\ \midline
+\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_032089.1?report=fasta&from=11&to=30&strand=false}{\texttt{NC\_032089.1:11-30 (+)}} & \texttt{AATCACAAATTCCTTTGAAA} & 100 & $0.072$ & yes & \cmark & yes & \cmark\\
+\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_032089.1?report=fasta&from=216721&to=216740&strand=true}{\texttt{NC\_032089.1:216721-216740 (-)}} & \texttt{AATCA\textcolor{white!70!black}{A}AAATT\textcolor{white!70!black}{G}CTTTGAAA} & 82 & $2.3$ & yes & \cmark & yes & \cmark\\
+\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_032089.1?report=fasta&from=2143261&to=2143279&strand=true}{\texttt{NC\_032089.1:2143261-2143279 (-)}} & \texttt{A\textcolor{white!70!black}{G}TCACAAATTCCTTTGAA\textcolor{white!70!black}{.}} & 86 & $1.1$ & yes & \cmark & no & \xmark\\
+\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_032091.1?report=fasta&from=427800&to=427819&strand=true}{\texttt{NC\_032091.1:427800-427819 (-)}} & \texttt{AA\textcolor{white!70!black}{A}CACAAATTC\textcolor{white!70!black}{A}TTTGAAA} & 82 & $2.3$ & yes & \cmark & yes & \cmark\\
+\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_032095.1?report=fasta&from=700284&to=700301&strand=false}{\texttt{NC\_032095.1:700284-700301 (+)}} & \texttt{AATCACAAA\textcolor{red!70!black}{-}\textcolor{red!70!black}{-}CCTTTGAAA} & 74 & $224$ & no & \cmark & yes & \xmark\\
